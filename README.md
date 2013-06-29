@@ -1,3 +1,3 @@
-Yuidoc-to-Markdown
-==================
+yuidoc2md
+=========
 A markdown generator for yuidoc documentation. 

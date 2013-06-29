@@ -1,8 +1,9 @@
 {
-  "name": "yuidoc-to-markdown",
+  "name": "yuidoc2md",
   "version": "0.0.0",
-  "description": "",
-  "main": "lib/yuidoc-to-markdown",
+  "description": "A yuidoc-to-markdown generator.",
+  "main": "lib/yuidoc2md",
+  "bin": "cli.js",
   "author": "Lloyd Brookes",
   "license": "BSD",
   "dependencies": {
