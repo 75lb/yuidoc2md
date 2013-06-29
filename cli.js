@@ -10,8 +10,19 @@ global.l = console.log;
 process.argv.splice(0, 2);
 
 var options  = new Thing()
-    .mixIn(y2md.getMarkdown.getOptions())
+    .mixIn(y2md.getMarkdown.getOptions(), "getMD")
+    .define({ name: "output-dir", alias: "o", default: "yuidoc2md" })
     .set(process.argv);
 
-var markdowns = y2md.getMarkdown(options);
-l(markdowns);
+var generatedDocs = y2md.getMarkdown(options.where({ group: "getMD" }));
+
+if (!fs.existsSync(options["output-dir"])){
+    fs.mkdirSync(options["output-dir"]);
+}
+
+generatedDocs.forEach(function(generatedDoc){
+    fs.writeFileSync(
+        path.resolve(options["output-dir"], generatedDoc.name) + ".md", 
+        generatedDoc.markdown
+    );
+});
