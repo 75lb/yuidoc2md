@@ -14,7 +14,7 @@ Output to a specific folder
 $ yuidoc2md src --output-dir out
 ```
 
-Generate using your own (mustache)[https://github.com/janl/mustache.js] template:
+Generate using your own [mustache](https://github.com/janl/mustache.js) template:
 ```sh
 $ yuidoc2md src --template mytemplate.mustache
 ```
