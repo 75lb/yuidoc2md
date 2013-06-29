@@ -4,14 +4,9 @@
 var y2md = require("./lib/yuidoc2md");
 
 global.l = console.log;
+process.argv.splice(0, 2);
 
-var markdowns = y2md.getMarkdown({
-    yuidoc: { 
-        paths: [ "test/fixture" ], 
-        writeJSON: false
-    }
-});
-
+var markdowns = y2md.getMarkdown(process.argv);
 l(markdowns);
 
 // var paths = {

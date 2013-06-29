@@ -2,12 +2,14 @@
   "name": "yuidoc2md",
   "version": "0.0.0",
   "description": "A yuidoc-to-markdown generator.",
+  "repository": "https://github.com/75lb/yuidoc2md",
   "main": "lib/yuidoc2md",
   "bin": "cli.js",
   "author": "Lloyd Brookes",
   "license": "BSD",
   "dependencies": {
     "yuidocjs": "~0.3.44",
-    "mustache": "~0.7.2"
+    "mustache": "~0.7.2",
+    "nature": "0.0.4"
   }
 }
