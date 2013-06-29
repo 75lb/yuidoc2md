@@ -1,0 +1,12 @@
+{
+  "name": "yuidoc-to-markdown",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/yuidoc-to-markdown",
+  "author": "Lloyd Brookes",
+  "license": "BSD",
+  "dependencies": {
+    "yuidocjs": "~0.3.44",
+    "mustache": "~0.7.2"
+  }
+}

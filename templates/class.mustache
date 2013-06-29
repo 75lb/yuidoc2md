@@ -1,0 +1,48 @@
+#{{name}}
+{{#extends}}**Extends**: {{{extends}}}  
+{{/extends}}{{#uses.length}}**Uses**:
+
+{{#uses}}
+* {{{.}}}
+{{/uses}}{{/uses.length}}
+
+{{{description}}}
+
+{{#properties.length}}##Properties{{/properties.length}}
+{{#properties}}
+###{{name}}
+**defined in**: {{{file}}}, line {{line}}  
+**type**: {{type}}
+
+{{description}}
+
+{{#example}}
+####Example
+{{{.}}}
+{{/example}}
+{{/properties}}
+
+{{#methods.length}}##Methods{{/methods.length}}
+{{#methods}}
+###{{name}}
+**defined in**: {{{file}}}, **line** {{line}}  
+{{#access}}**access**: {{access}}  {{/access}}
+{{{description}}}
+{{#params.length}}####Parameters
+{{#params}}
+*   {{name}} _{{type}}_
+
+    {{{description}}}
+    
+{{/params}}{{/params.length}}
+{{#return}}
+
+**Returns**: {{type}}  
+{{{description}}}
+
+{{/return}}
+{{#example}}
+####Example
+{{{.}}}
+{{/example}}
+{{/methods}}
