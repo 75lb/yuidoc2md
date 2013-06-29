@@ -2,6 +2,15 @@ yuidoc2md
 =========
 A markdown generator for yuidoc documentation. 
 
+Install
+-------
+```sh
+$ npm install -g yuidoc2md
+```
+
+*Linux/Mac users may need to run the above with `sudo`*
+
+
 Usage
 -----
 Write markdown documentation for all source under `src/` to the default output directory `yuidoc2md`:
