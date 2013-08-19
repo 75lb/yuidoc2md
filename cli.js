@@ -6,11 +6,8 @@ var y2md = require("./lib/yuidoc2md"),
     path = require("path"),
     Thing = require("nature").Thing;
 
-global.l = console.log;
-process.argv.splice(0, 2);
-
 var options  = new Thing()
-    .mixIn(y2md.getMarkdown.getOptions(), "getMD")
+    .mixIn(new y2md.getMarkdownOptions(), "getMD")
     .define({ name: "output-dir", alias: "o", default: "yuidoc2md" })
     .set(process.argv);
 

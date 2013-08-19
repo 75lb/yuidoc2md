@@ -1,5 +1,5 @@
-#{{name}}
-{{#extends}}**Extends**: {{{extends}}}  
+#{{name}}{{#extends}}
+**Extends**: {{{extends}}}  
 {{/extends}}{{#uses.length}}**Uses**:
 
 {{#uses}}
@@ -7,8 +7,8 @@
 {{/uses}}{{/uses.length}}
 
 {{{description}}}
-
-{{#properties.length}}##Properties{{/properties.length}}
+{{#properties.length}}
+##Properties{{/properties.length}}
 {{#properties}}
 ###{{name}}
 **type**: {{type}}
@@ -23,10 +23,12 @@
 
 {{#methods.length}}##Methods{{/methods.length}}
 {{#methods}}
+
 ###{{name}}
 {{#access}}**access**: {{access}}  {{/access}}
-{{{description}}}
-{{#params.length}}####Parameters
+{{{description}}}{{#params.length}}
+
+####Parameters
 {{#params}}
 *   {{name}} _{{type}}_
 
