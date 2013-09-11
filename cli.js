@@ -11,7 +11,7 @@ function red(txt){
 }
 
 var optionSet  = new Thing()
-    .mixIn(new y2md.getMarkdownOptions(), "getMD")
+    .mixIn(new y2md.MarkdownOptions(), "getMD")
     .define({ name: "output-dir", alias: "o", default: "yuidoc2md" })
     .on("error", function(err){
         console.error(red("Error: ") + err.message);

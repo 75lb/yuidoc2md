@@ -11,7 +11,8 @@
 ##Properties{{/properties.length}}
 {{#properties}}
 ###{{name}}
-**type**: {{type}}
+**type**: {{type}}  
+{{#default}}**default**: {{default}}{{/default}}
 
 {{description}}
 
@@ -26,7 +27,8 @@
 
 ###{{name}}
 {{#access}}**access**: {{access}}  {{/access}}
-{{{description}}}{{#params.length}}
+{{{description}}}
+{{#params.length}}
 
 ####Parameters
 {{#params}}
