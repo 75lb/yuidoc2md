@@ -1,4 +1,5 @@
-#{{name}}{{#extends}}
+#{{name}}
+{{#extends}}
 **Extends**: {{{extends}}}  
 {{/extends}}{{#uses.length}}**Uses**:
 
@@ -7,6 +8,8 @@
 {{/uses}}{{/uses.length}}
 
 {{{description}}}
+{{#example.length}}##Example{{/example.length}}{{#example}}{{{.}}}
+{{/example}}
 {{#properties.length}}
 ##Properties{{/properties.length}}
 {{#properties}}
