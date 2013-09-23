@@ -1,3 +1,5 @@
+[![NPM version](https://badge.fury.io/js/yuidoc2md.png)](http://badge.fury.io/js/yuidoc2md)
+
 yuidoc2md
 =========
 A markdown generator for yuidoc documentation. 
@@ -36,3 +38,4 @@ $ yuidoc2md src/ lib/ test/
 
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/73a8cb7dd34b538b81fbfa6d8339aee2 "githalytics.com")](http://githalytics.com/75lb/yuidoc2md)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/75lb/yuidoc2md/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
