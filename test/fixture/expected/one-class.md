@@ -1,6 +1,6 @@
-#ClassC
+#ClassA
 
-The description for ClassC
+The description for ClassA
 ##Properties
 ###someProp
 **type**: String  

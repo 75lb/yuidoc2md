@@ -3,11 +3,11 @@
 */
 
 /**
-The description for ClassC
-@class ClassC
+The description for ClassA
+@class ClassA
 @constructor
 */
-function ClassC(){
+function ClassA(){
     
     /**
     @property someProp
@@ -24,3 +24,4 @@ function ClassC(){
 @param {Number} num A number
 */
 ClassA.prototype.methodA = function(){};
+
