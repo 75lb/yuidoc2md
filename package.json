@@ -7,6 +7,9 @@
   "bin": "cli.js",
   "author": "Lloyd Brookes",
   "license": "MIT",
+  "scripts": {
+      "test": "mocha --reporter spec test/*.js"
+  },
   "dependencies": {
     "yuidocjs": "~0.3.44",
     "mustache": "~0.7.2",
