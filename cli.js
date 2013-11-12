@@ -11,21 +11,18 @@ function red(txt){
 }
 
 var usage = "Usage:\n\
-$ yuidoc2md [options] <src-dir> <src-dir> ...\n\
+$ yuidoc2md [options] \n\
 \n\
--d, --output-dir  Where the output markdown files will be written\n\
--e, --exclude     A comma-separated list of source directories to exclude\n\
 -t, --template    Override the built-in moustache template\n\
 -i, --input       Input file to process\n\
 -o, --output      Output file\n\
 -h, --help        Print this help\n\n";
 
 var optionSet  = new Thing()
-    .mixIn(new y2md.MarkdownOptions(), "getMD")
-    .define({ name: "output-dir", alias: "d", default: "yuidoc2md" })
     .define({ name: "help", type: "boolean", alias: "h" })
     .define({ name: "input", type: "string", alias: "i" })
     .define({ name: "output", type: "string", alias: "o" })
+    .define({ name: "json", type: "boolean", alias: "j" })
     .on("error", function(err){
         console.error(red("Error: ") + err.message);
         process.exit(1);
@@ -38,30 +35,17 @@ if (optionSet.help || (!optionSet.input && !optionSet.paths)){
 }
 
 if (optionSet.valid){
-    if (optionSet.input){
-        var md = y2md.getMarkdown2(optionSet.input);
+    if (optionSet.json){
+        console.log(y2md.getJson(optionSet.input));
+    } else {
+        var md = y2md.getMarkdown(optionSet.input);
         if (optionSet.output){
             fs.writeFileSync(optionSet.output, md);
         } else {
             console.log(md);
         }
-        
-    } else {
-        var generatedDocs = y2md.getMarkdown(optionSet.where({ group: "getMD" }));
-
-        if (!fs.existsSync(optionSet["output-dir"])){
-            fs.mkdirSync(optionSet["output-dir"]);
-        }
-
-        if (generatedDocs){
-            generatedDocs.forEach(function(generatedDoc){
-                fs.writeFileSync(
-                    path.resolve(optionSet["output-dir"], generatedDoc.name) + ".md", 
-                    generatedDoc.markdown
-                );
-            });
-        }
     }
+
 } else {
     console.error(red("Some option values were invalid"));
     optionSet.validationMessages.forEach(function(prop){

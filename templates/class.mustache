@@ -1,16 +1,18 @@
 #{{name}}
+
+{{{description}}}
+{{#example.length}}##Example{{/example.length}}{{#example}}{{{.}}}
+{{/example}}
 {{#extends}}
+
 **Extends**: {{{extends}}}  
 {{/extends}}{{#uses.length}}**Uses**:
 
 {{#uses}}
 * {{{.}}}
 {{/uses}}{{/uses.length}}
-
-{{{description}}}
-{{#example.length}}##Example{{/example.length}}{{#example}}{{{.}}}
-{{/example}}
 {{#properties.length}}
+
 ##Properties{{/properties.length}}
 {{#properties}}
 ###{{name}}
