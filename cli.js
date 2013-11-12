@@ -20,7 +20,7 @@ $ yuidoc2md [options] \n\
 
 var optionSet  = new Thing()
     .define({ name: "help", type: "boolean", alias: "h" })
-    .define({ name: "input", type: "string", alias: "i" })
+    .define({ name: "input", alias: "i", type: Array, defaultOption: true })
     .define({ name: "output", type: "string", alias: "o" })
     .define({ name: "json", type: "boolean", alias: "j" })
     .on("error", function(err){
@@ -35,15 +35,13 @@ if (optionSet.help || (!optionSet.input && !optionSet.paths)){
 }
 
 if (optionSet.valid){
-    if (optionSet.json){
-        console.log(y2md.getJson(optionSet.input));
+    var result = optionSet.json
+        ? y2md.getJson(optionSet.input)
+        : y2md.getMarkdown(optionSet.input);
+    if (optionSet.output){
+        fs.writeFileSync(optionSet.output, result);
     } else {
-        var md = y2md.getMarkdown(optionSet.input);
-        if (optionSet.output){
-            fs.writeFileSync(optionSet.output, md);
-        } else {
-            console.log(md);
-        }
+        console.log(result);
     }
 
 } else {

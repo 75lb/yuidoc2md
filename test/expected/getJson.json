@@ -1,115 +1,128 @@
 {
-    "modules": [
-        { 
-            "name": "form",
-            "classes": [
-                {
-                    "name": "Select",
-                    "description": "The description for Select",
-                    "extends": "Object",
-                    "uses": [
-                        "clive.txt",
-                        "hater.txt"
-                    ],
-                    "constructorArgs": []
+   "modules": [
+      {
+         "name": "form",
+         "classes": [
+            {
+               "name": "ComboBox",
+               "properties": [
+                  {
+                     "name": "someProp",
+                     "type": "String",
+                     "default": "\"whatever\"",
+                     "example": [
+                        " this.someProp = \"val\";"
+                     ]
+                  }
+               ],
+               "methods": [
+                  {
+                     "name": "methodA",
+                     "params": [
                         {
-                            "name": "arg1",
-                            "type": "String",
-                            "description": "arg1 description"
+                           "name": "str",
+                           "description": "A string",
+                           "type": "String"
                         },
                         {
-                            "name": "arg2",
-                            "type": "Number",
-                            "description": "arg2 description"
+                           "name": "num",
+                           "description": "A number",
+                           "type": "Number"
                         }
-                    ],
-                    "properties": [
+                     ],
+                     "return": {
+                        "description": "return val",
+                        "type": "Number"
+                     },
+                     "chainable": 1
+                  },
+                  {
+                     "name": "methodA",
+                     "return": {
+                        "description": "return val",
+                        "type": "Boolean"
+                     }
+                  }
+               ],
+               "description": "The description for ComboBox",
+               "extends": "Object",
+               "uses": [
+                  "clive.txt",
+                  "hater.txt"
+               ],
+               "constructorArgs": [
+                  {
+                     "name": "arg1",
+                     "description": "arg1 description",
+                     "type": "String"
+                  },
+                  {
+                     "name": "arg2",
+                     "description": "arg2 description",
+                     "type": "Number"
+                  }
+               ]
+            },
+            {
+               "name": "Select",
+               "properties": [
+                  {
+                     "name": "someProp",
+                     "type": "String",
+                     "default": "\"whatever\"",
+                     "example": [
+                        " this.someProp = \"val\";"
+                     ]
+                  }
+               ],
+               "methods": [
+                  {
+                     "name": "methodA",
+                     "params": [
                         {
-                            "name": "someProp",
-                            "type": "String",
-                            "default": "\"whatever\"",
-                            "example": [
-                               " this.someProp = \"val\";"
-                            ],
-                        }
-                    ],
-                    "methods": [
-                        {
-                            "name": "methodA",
-                            "params": [
-                               {
-                                  "name": "str",
-                                  "description": "A string",
-                                  "type": "String"
-                               },
-                               {
-                                  "name": "num",
-                                  "description": "A number",
-                                  "type": "Number"
-                               }
-                            ],
-                            "return": {
-                               "description": "return val",
-                               "type": "Number"
-                            },
-                            "chainable": true
-                        }
-                    ]
-                },
-                {
-                    "name": "ComboBox",
-                    "description": "The description for ComboBox",
-                    "extends": "Object",
-                    "properties": [
-                        {
-                            "name": "someProp",
-                            "type": "String",
-                            "default": "\"whatever\"",
-                            "example": [
-                               " this.someProp = \"val\";"
-                            ],
-                        }
-                    ],
-                    "methods": [
-                        {
-                            "name": "methodA",
-                            "params": [
-                               {
-                                  "name": "str",
-                                  "description": "A string",
-                                  "type": "String"
-                               },
-                               {
-                                  "name": "num",
-                                  "description": "A number",
-                                  "type": "Number"
-                               }
-                            ],
-                            "return": {
-                               "description": "return val",
-                               "type": "Number"
-                            },
-                            "chainable": true
+                           "name": "str",
+                           "description": "A string",
+                           "type": "String"
                         },
                         {
-                            "name": "methodB",
-                            "return": {
-                               "description": "return val",
-                               "type": "Boolean"
-                            }
+                           "name": "num",
+                           "description": "A number",
+                           "type": "Number"
                         }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "mixins",
-            "classes": [
-                {
-                    "name": "UselessMixin",
-                    "description": "waste of space"
-                }
-            ]
-        }
-    ]
+                     ],
+                     "return": {
+                        "description": "return val",
+                        "type": "Number"
+                     },
+                     "chainable": 1
+                  }
+               ],
+               "description": "The description for Select",
+               "extends": "Object",
+               "uses": [
+                  "clive.txt",
+                  "hater.txt"
+               ],
+               "constructorArgs": [
+                  {
+                     "name": "arg1",
+                     "description": "arg1 description",
+                     "type": "String"
+                  },
+                  {
+                     "name": "arg2",
+                     "description": "arg2 description",
+                     "type": "Number"
+                  }
+               ]
+            },
+            {
+               "name": "UselessMixin",
+               "properties": [],
+               "methods": [],
+               "description": "waste of space"
+            }
+         ]
+      }
+   ]
 }
