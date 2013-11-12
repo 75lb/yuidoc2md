@@ -10,7 +10,7 @@
                      "name": "someProp",
                      "type": "String",
                      "default": "\"whatever\"",
-                     "example": [
+                     "examples": [
                         " this.someProp = \"val\";"
                      ]
                   }
@@ -18,6 +18,7 @@
                "methods": [
                   {
                      "name": "methodA",
+                     "chainable": "true",
                      "params": [
                         {
                            "name": "str",
@@ -30,15 +31,15 @@
                            "type": "Number"
                         }
                      ],
-                     "return": {
+                     "returns": {
                         "description": "return val",
                         "type": "Number"
-                     },
-                     "chainable": 1
+                     }
                   },
                   {
                      "name": "methodA",
-                     "return": {
+                     "chainable": null,
+                     "returns": {
                         "description": "return val",
                         "type": "Boolean"
                      }
@@ -70,14 +71,24 @@
                      "name": "someProp",
                      "type": "String",
                      "default": "\"whatever\"",
-                     "example": [
-                        " this.someProp = \"val\";"
+                     "examples": [
+                        "\nset a value: \n\n    this.someProp = \"val\";"
+                     ],
+                     "description": "A property called someProp"
+                  },
+                  {
+                     "name": "anotherProp",
+                     "type": "String",
+                     "default": "\"don't care\"",
+                     "examples": [
+                        " this.anotherProp = \"val\";"
                      ]
                   }
                ],
                "methods": [
                   {
                      "name": "methodA",
+                     "chainable": "true",
                      "params": [
                         {
                            "name": "str",
@@ -90,11 +101,34 @@
                            "type": "Number"
                         }
                      ],
-                     "return": {
+                     "returns": {
                         "description": "return val",
                         "type": "Number"
                      },
-                     "chainable": 1
+                     "examples": [
+                        "\nTHis is how to use it: \n\n    select.methodA(some, shit);\n"
+                     ]
+                  },
+                  {
+                     "name": "methodB",
+                     "description": "This is Method B",
+                     "chainable": null,
+                     "params": [
+                        {
+                           "name": "str",
+                           "description": "A string",
+                           "type": "String"
+                        },
+                        {
+                           "name": "num",
+                           "description": "A number",
+                           "type": "Number"
+                        }
+                     ],
+                     "returns": {
+                        "description": "return val",
+                        "type": "Number"
+                     }
                   }
                ],
                "description": "The description for Select",
@@ -114,6 +148,9 @@
                      "description": "arg2 description",
                      "type": "Number"
                   }
+               ],
+               "examples": [
+                  " var select = new Select(one, two);"
                ]
             },
             {

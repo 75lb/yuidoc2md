@@ -11,17 +11,16 @@ function red(txt){
 }
 
 var usage = "Usage:\n\
-$ yuidoc2md [options] \n\
+$ yuidoc2md [options] <files>\n\
 \n\
--t, --template    Override the built-in moustache template\n\
--i, --input       Input file to process\n\
--o, --output      Output file\n\
--h, --help        Print this help\n\n";
+-t, --template    A handlebars template filename to override the default\n\
+-j, --json        Output json\n\
+-h, --help        Print this help\n";
 
 var optionSet  = new Thing()
     .define({ name: "help", type: "boolean", alias: "h" })
     .define({ name: "input", alias: "i", type: Array, defaultOption: true })
-    .define({ name: "output", type: "string", alias: "o" })
+    .define({ name: "template", alias: "t", type: "string" })
     .define({ name: "json", type: "boolean", alias: "j" })
     .on("error", function(err){
         console.error(red("Error: ") + err.message);
@@ -36,12 +35,12 @@ if (optionSet.help || (!optionSet.input && !optionSet.paths)){
 
 if (optionSet.valid){
     var result = optionSet.json
-        ? y2md.getJson(optionSet.input)
-        : y2md.getMarkdown(optionSet.input);
+        ? JSON.stringify(y2md.getJson(optionSet.input), null, "   ")
+        : y2md.getMarkdown(optionSet.input, optionSet.template);
     if (optionSet.output){
         fs.writeFileSync(optionSet.output, result);
     } else {
-        console.log(result);
+        process.stdout.write(result);
     }
 
 } else {
