@@ -1,38 +1,40 @@
-{{#modules}}{{#classes}}#{{../name}}/{{name}}
+{{#modules}}{{#classes}}#{{#if ../name}}{{../../name}}/{{/if}}{{name}}
 
-{{{description}}}
+{{description}}{{#if examples}}
 
-{{#if examples}}####Example
-{{examples}}
+####Example
+{{{examples}}}{{/if}}{{#if extends}}
 
-{{/if}}{{#if extends}}**Extends**: {{extends}}
-{{/if}}{{#if uses}}**Uses**: {{uses}}
+**Extends**: {{extends}}{{/if}}{{#if uses}}
+**Uses**: {{uses}}{{/if}}{{#if properties}}
 
-{{/if}}{{#if properties}}##Properties
+##Properties{{#properties}}
 
-{{#properties}}###{{name}}{{#if description}}
+###{{name}}{{#if description}}
 
-{{description}}{{/if}}
+{{{description}}}{{/if}}
 
-**type**: {{type}}{{#if default}}
+**type**: {{type}}{{#if default}}  
 **default**: {{default}}{{/if}}{{#if examples}}
 
 ####Example
-{{{examples}}}
+{{{examples}}}{{/if}}{{/properties}}{{/if}}{{#if methods}}
 
-{{/if}}{{/properties}}{{/if}}{{#if methods}}##Methods
-{{#methods}}
-###{{name}}
+##Methods{{#methods}}
 
-{{#if description}}{{{description}}}
+###{{name}}{{#if description}}
 
-{{/if}}{{#if chainable}}**Chainable**: {{chainable}}
-{{/if}}{{#if returns}}**Returns**: {{returns.type}} - {{returns.description}}
+{{description}}{{/if}}{{#if chainable}}
 
-{{/if}}{{#if params}}{{#params}}*   {{name}} _{{type}}_
+**Chainable**: {{chainable}}{{/if}}{{#if returns}}
+
+**Returns**: _{{returns.type}}_ - {{returns.description}}{{/if}}{{#if params}}
+
+{{#params}}*   {{name}} _{{type}}_
 
     {{{description}}}
 {{/params}}{{/if}}{{#if examples}}
 ####Example
-{{examples}}{{/if}}{{/methods}}{{/if}}
+{{{examples}}}{{/if}}{{/methods}}{{/if}}
+
 {{/classes}}{{/modules}}
