@@ -5,8 +5,10 @@
 ####Example
 {{{examples}}}{{/if}}{{#if extends}}
 
-**Extends**: {{extends}}{{/if}}{{#if uses}}
-**Uses**: {{uses}}{{/if}}{{#if properties}}
+**Extends**: {{extends}}{{/if}}{{#if uses}}  
+**Uses**: 
+{{#uses}}* {{this}}
+{{/uses}}{{/if}}{{#if properties}}
 
 ##Properties{{#properties}}
 
