@@ -17,42 +17,39 @@ Usage
 -----
 ```sh
 Usage:
-$ yuidoc2md [--exclude <src-dir-list>] [--template <filename>] [--output-dir <dir>] <src-dir> <src-dir> ...
-$ yuidoc2md --input <filename> [--output <filename>]
+$ yuidoc2md [options] <files>
 
--d, --output-dir  Where the output markdown files will be written
--e, --exclude     A comma-separated list of source directories to exclude
--t, --template    Override the built-in moustache template
--i, --input       Input file to process
--o, --output      Output file
+-t, --template    A handlebars template filename to override the default
+-j, --json        Output json
 -h, --help        Print this help
 ```
 
-Write markdown documentation for all source under `src/` to the default output directory `yuidoc2md`:
+Output markdown doc for all source under `src/` to `stdout`:
 ```sh
-$ yuidoc2md src/
+$ yuidoc2md src/*
 ```
 
-Output to a specific folder
+Output markdown doc for all source under `src/` to a file:
 ```sh
-$ yuidoc2md src --output-dir out
+$ yuidoc2md src/* > documentation.md
 ```
 
-Generate using your own [mustache](https://github.com/janl/mustache.js) template:
+Generate using your own [handlebars](http://handlebarsjs.com) template:
 ```sh
-$ yuidoc2md src --template mytemplate.mustache
+$ yuidoc2md src/* --template mytemplate.hbs
 ```
 
-Read multiple source directories: 
+Generate html using [marked](https://github.com/chjj/marked):
 ```sh
-$ yuidoc2md src/ lib/ test/
+$ yuidoc2md src/* | marked
 ```
 
-Operate on a file-by-file basis
+Generate JSON
 ```sh
-$ yuidoc2md --input src/main.js --output docs/main.md
+$ yuidoc2md src/* --json
 ```
-
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/73a8cb7dd34b538b81fbfa6d8339aee2 "githalytics.com")](http://githalytics.com/75lb/yuidoc2md)
+[![NPM](https://nodei.co/npm-dl/yuidoc2md.png?months=1)](https://nodei.co/npm/yuidoc2md/)
+
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/75lb/yuidoc2md/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
