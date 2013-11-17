@@ -10,15 +10,21 @@
 {{#uses}}* {{this}}
 {{/uses}}{{/if}}{{#if properties}}
 
-##Properties
+##Properties {{#properties}}
+
+### {{name}}
+
 <table>
     <tr>
-        <th>Property</th><th>Type</th><th>Description</th><th>Default</th>
-    </tr>{{#properties}}
+        <th>Property</th><th>Type</th><th>Description</th>{{#if default}}<th>Default</th>{{/if}}
+    </tr>
     <tr>
-        <td>{{name}}</td><td><em>{{type}}</em></td><td>{{description}}</td><td>{{default}}</td>
-    </tr>{{/properties}}
-</table>{{/if}}{{#if methods}}
+        <td>{{name}}</td><td><em>{{type}}</em></td><td>{{description}}</td>{{#if default}}<td>{{default}}</td>{{/if}}
+    </tr>
+</table>{{#if examples}}
+
+#### Example
+{{{examples}}}{{/if}}{{/properties}}{{/if}}{{#if methods}}
 
 ##Methods{{#methods}}
 
@@ -30,11 +36,17 @@
 
 **Returns**: _{{returns.type}}_ - {{returns.description}}{{/if}}{{#if params}}
 
-**Params**:  
-{{#params}}*   {{name}} _{{type}}_
+**Params**:
+<table>
+    <tr>
+        <th>Name</th><th>Type</th><th>Description</th>
+    </tr>{{#params}}
+    <tr>
+        <td>{{name}}</td><td><em>{{type}}</em></td><td>{{description}}</td>
+    </tr>{{/params}}
+</table>
+{{/if}}{{#if examples}}
 
-    {{{description}}}
-{{/params}}{{/if}}{{#if examples}}
 ####Example
 {{{examples}}}{{/if}}{{/methods}}{{/if}}
 
