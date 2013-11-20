@@ -2,7 +2,11 @@ var assert = require("assert"),
     yuidoc2md = require("../lib/yuidoc2md"),
     fs = require("fs");
 
-it("override template");
+it("test override template");
+it("should print an index of properties or methods list length is long");
+it("sort property and methods by name?");
+it("should doc events");
+it("should doc optional properties");
 
 describe("getMarkdown()", function(){
     it("one file", function(){
