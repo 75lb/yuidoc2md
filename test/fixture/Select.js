@@ -64,6 +64,8 @@ Select.prototype.methodB = function(){
     it emits an event
     @event somthing
     @param {String} message The message for the event
+    @example
+        Event example
     */
     this.emit("something", message);
 };

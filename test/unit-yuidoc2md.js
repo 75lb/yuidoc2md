@@ -7,6 +7,7 @@ it("should print an index of properties or methods list length is long");
 it("sort property and methods by name?");
 it("should doc events");
 it("should doc optional properties");
+it("should order output classes according to order of input files");
 
 describe("getMarkdown()", function(){
     it("one file", function(){

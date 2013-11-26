@@ -5,8 +5,11 @@ The description for Select
 ####Example
  var select = new Select(one, two);
 
-**Extends**: Object
-**Uses**: clive.txt,hater.txt
+**Extends**: Object  
+**Uses**: 
+* clive.txt
+* hater.txt
+
 
 ##Properties
 
@@ -14,7 +17,7 @@ The description for Select
 
 A property called someProp
 
-**type**: String
+**type**: String  
 **default**: &quot;whatever&quot;
 
 ####Example
@@ -25,7 +28,7 @@ set a value:
 
 ###anotherProp
 
-**type**: String
+**type**: String  
 **default**: &quot;don&#x27;t care&quot;
 
 ####Example
@@ -36,8 +39,10 @@ set a value:
 ###methodA
 
 **Chainable**: true
-**Returns**: Number - return val
 
+**Returns**: _Number_ - return val
+
+**Params**:  
 *   str _String_
 
     A string
@@ -51,16 +56,34 @@ THis is how to use it:
 
     select.methodA(some, shit);
 
+
 ###methodB
 
 This is Method B
 
-**Returns**: Number - return val
+**Returns**: _Number_ - return val
 
+**Params**:  
 *   str _String_
 
     A string
 *   num _Number_
 
     A number
+
+
+##Events
+
+###somthing
+
+it emits an event
+
+**Params**:  
+*   message _String_
+
+    The message for the event
+
+####Example
+
+    Event example
 
