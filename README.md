@@ -1,4 +1,6 @@
 [![NPM version](https://badge.fury.io/js/yuidoc2md.png)](http://badge.fury.io/js/yuidoc2md)
+[![Dependency Status](https://david-dm.org/75lb/yuidoc2md.png)](https://david-dm.org/75lb/yuidoc2md)
+![Analytics](https://ga-beacon.appspot.com/UA-27725889-14/yuidoc2md/README.md?pixel)
 
 yuidoc2md
 =========
@@ -49,7 +51,4 @@ Generate JSON
 $ yuidoc2md src/* --json
 ```
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/73a8cb7dd34b538b81fbfa6d8339aee2 "githalytics.com")](http://githalytics.com/75lb/yuidoc2md)
-[![NPM](https://nodei.co/npm-dl/yuidoc2md.png?months=1)](https://nodei.co/npm/yuidoc2md/)
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/75lb/yuidoc2md/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![NPM](https://nodei.co/npm-dl/yuidoc2md.png?months=3)](https://nodei.co/npm/yuidoc2md/)
