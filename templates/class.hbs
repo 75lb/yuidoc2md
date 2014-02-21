@@ -35,7 +35,8 @@
 **Params**:  
 {{#params}}*   {{name}} _{{type}}_
 
-    {{{description}}}
+    {{{description}}}{{#if props}}{{#props}}
+    * {{name}} _{{type}}_ - {{{description}}}{{/props}}{{/if}}
 {{/params}}{{/if}}{{#if examples}}
 ####Example
 {{{examples}}}{{/if}}{{/methods}}{{/if}}{{#if events}}
