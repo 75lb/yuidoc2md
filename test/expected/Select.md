@@ -79,9 +79,7 @@ This is Method B
 it emits an event
 
 **Params**:  
-*   message _String_
-
-    The message for the event
+*   message _String_The message for the event
 
 ####Example
 

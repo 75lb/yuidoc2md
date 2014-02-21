@@ -37,14 +37,34 @@
                      }
                   },
                   {
-                     "name": "methodA",
+                     "name": "methodB",
                      "chainable": null,
+                     "params": [
+                        {
+                           "name": "options",
+                           "description": "An options hash",
+                           "type": "Object",
+                           "props": [
+                              {
+                                 "name": "one",
+                                 "description": "First thing",
+                                 "type": "String"
+                              },
+                              {
+                                 "name": "two",
+                                 "description": "Second thing",
+                                 "type": "Number"
+                              }
+                           ]
+                        }
+                     ],
                      "returns": {
                         "description": "return val",
                         "type": "Boolean"
                      }
                   }
                ],
+               "events": [],
                "description": "The description for ComboBox",
                "extends": "Object",
                "uses": [
@@ -131,6 +151,22 @@
                      }
                   }
                ],
+               "events": [
+                  {
+                     "name": "somthing",
+                     "description": "it emits an event",
+                     "params": [
+                        {
+                           "name": "message",
+                           "description": "The message for the event",
+                           "type": "String"
+                        }
+                     ],
+                     "examples": [
+                        "\n    Event example"
+                     ]
+                  }
+               ],
                "description": "The description for Select",
                "extends": "Object",
                "uses": [
@@ -157,6 +193,7 @@
                "name": "UselessMixin",
                "properties": [],
                "methods": [],
+               "events": [],
                "description": "waste of space"
             }
          ]

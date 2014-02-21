@@ -2,14 +2,17 @@
 
 The description for ComboBox
 
-**Extends**: Object
-**Uses**: clive.txt,hater.txt
+**Extends**: Object  
+**Uses**: 
+* clive.txt
+* hater.txt
+
 
 ##Properties
 
 ###someProp
 
-**type**: String
+**type**: String  
 **default**: &quot;whatever&quot;
 
 ####Example
@@ -20,8 +23,10 @@ The description for ComboBox
 ###methodA
 
 **Chainable**: true
-**Returns**: Number - return val
 
+**Returns**: _Number_ - return val
+
+**Params**:  
 *   str _String_
 
     A string
@@ -29,9 +34,17 @@ The description for ComboBox
 
     A number
 
-###methodA
 
-**Returns**: Boolean - return val
+###methodB
+
+**Returns**: _Boolean_ - return val
+
+**Params**:  
+*   options _Object_
+
+    An options hash
+    * one _String_ - First thing
+    * two _Number_ - Second thing
 
 
 #form/Select
@@ -41,8 +54,11 @@ The description for Select
 ####Example
  var select = new Select(one, two);
 
-**Extends**: Object
-**Uses**: clive.txt,hater.txt
+**Extends**: Object  
+**Uses**: 
+* clive.txt
+* hater.txt
+
 
 ##Properties
 
@@ -50,7 +66,7 @@ The description for Select
 
 A property called someProp
 
-**type**: String
+**type**: String  
 **default**: &quot;whatever&quot;
 
 ####Example
@@ -61,7 +77,7 @@ set a value:
 
 ###anotherProp
 
-**type**: String
+**type**: String  
 **default**: &quot;don&#x27;t care&quot;
 
 ####Example
@@ -72,8 +88,10 @@ set a value:
 ###methodA
 
 **Chainable**: true
-**Returns**: Number - return val
 
+**Returns**: _Number_ - return val
+
+**Params**:  
 *   str _String_
 
     A string
@@ -87,12 +105,14 @@ THis is how to use it:
 
     select.methodA(some, shit);
 
+
 ###methodB
 
 This is Method B
 
-**Returns**: Number - return val
+**Returns**: _Number_ - return val
 
+**Params**:  
 *   str _String_
 
     A string
@@ -100,8 +120,21 @@ This is Method B
 
     A number
 
+
+##Events
+
+###somthing
+
+it emits an event
+
+**Params**:  
+*   message _String_The message for the event
+
+####Example
+
+    Event example
+
 #form/UselessMixin
 
 waste of space
-
 
