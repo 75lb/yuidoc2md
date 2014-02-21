@@ -1,6 +1,6 @@
 {
   "name": "yuidoc2md",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "A yuidoc-to-markdown generator.",
   "repository": "https://github.com/75lb/yuidoc2md",
   "main": "lib/yuidoc2md",
