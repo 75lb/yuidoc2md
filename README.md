@@ -51,4 +51,201 @@ Generate JSON
 $ yuidoc2md src/* --json
 ```
 
+Example
+-------
+Running yuidoc2md on this Javascript: 
+
+```js
+/**
+@module form
+*/
+
+/**
+The description for ComboBox
+@class ComboBox
+@extends Object
+@uses clive.txt
+@uses hater.txt
+@constructor
+@param arg1 {String} arg1 description
+@param arg2 {Number} arg2 description
+*/
+function ComboBox(arg1, arg2){
+    
+    /**
+    @property someProp
+    @type String
+    @default "whatever"
+    @example this.someProp = "val";
+    */
+    this.someProp = "whatever";
+}
+
+/**
+@method methodA
+@param {String} str A string
+@param {Number} num A number
+@return {Number} return val
+@chainable
+*/
+ComboBox.prototype.methodA = function(){};
+
+/**
+@method methodB
+@param {Object} options An options hash
+    @param {String} options.one First thing
+    @param {Number} options.two Second thing
+@return {Boolean} return val
+*/
+ComboBox.prototype.methodB = function(){};
+```
+
+would produce this markdown:
+
+```md
+#form/ComboBox
+
+The description for ComboBox
+
+**Extends**: Object  
+**Uses**: 
+* clive.txt
+* hater.txt
+
+
+##Properties
+
+###someProp
+
+**type**: String  
+**default**: &quot;whatever&quot;
+
+####Example
+ this.someProp = "val";
+
+##Methods
+
+###methodA
+
+**Chainable**: true
+
+**Returns**: _Number_ - return val
+
+**Params**:  
+*   str _String_
+
+    A string
+*   num _Number_
+
+    A number
+
+
+###methodB
+
+**Returns**: _Boolean_ - return val
+
+**Params**:  
+*   options _Object_
+
+    An options hash
+    * one _String_ - First thing
+    * two _Number_ - Second thing
+```
+
+and this json:
+
+```json
+{
+   "modules": [
+      {
+         "name": "form",
+         "classes": [
+            {
+               "name": "ComboBox",
+               "properties": [
+                  {
+                     "name": "someProp",
+                     "type": "String",
+                     "default": "\"whatever\"",
+                     "examples": [
+                        " this.someProp = \"val\";"
+                     ]
+                  }
+               ],
+               "methods": [
+                  {
+                     "name": "methodA",
+                     "chainable": "true",
+                     "params": [
+                        {
+                           "name": "str",
+                           "description": "A string",
+                           "type": "String"
+                        },
+                        {
+                           "name": "num",
+                           "description": "A number",
+                           "type": "Number"
+                        }
+                     ],
+                     "returns": {
+                        "description": "return val",
+                        "type": "Number"
+                     }
+                  },
+                  {
+                     "name": "methodB",
+                     "chainable": null,
+                     "params": [
+                        {
+                           "name": "options",
+                           "description": "An options hash",
+                           "type": "Object",
+                           "props": [
+                              {
+                                 "name": "one",
+                                 "description": "First thing",
+                                 "type": "String"
+                              },
+                              {
+                                 "name": "two",
+                                 "description": "Second thing",
+                                 "type": "Number"
+                              }
+                           ]
+                        }
+                     ],
+                     "returns": {
+                        "description": "return val",
+                        "type": "Boolean"
+                     }
+                  }
+               ],
+               "events": [],
+               "description": "The description for ComboBox",
+               "extends": "Object",
+               "uses": [
+                  "clive.txt",
+                  "hater.txt"
+               ],
+               "constructorArgs": [
+                  {
+                     "name": "arg1",
+                     "description": "arg1 description",
+                     "type": "String"
+                  },
+                  {
+                     "name": "arg2",
+                     "description": "arg2 description",
+                     "type": "Number"
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}
+```
+
+
 [![NPM](https://nodei.co/npm-dl/yuidoc2md.png?months=3)](https://nodei.co/npm/yuidoc2md/)
