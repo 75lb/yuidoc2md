@@ -40,12 +40,12 @@ if (optionSet.valid){
     process.stdout.write(result);
     
     if (stats.dirs.length){
-        dope.red.log("Input must be files only, these directories were ignored: ");
-        dope.log(stats.dirs.join("\n").trim());
+        dope.red.error("Input must be files only, these directories were ignored: ");
+        dope.error(stats.dirs.join("\n").trim());
     }
     if (stats.notExisting.length){
-        dope.red.log("These files do not exist: ");
-        dope.log(stats.notExisting.join("\n").trim());
+        dope.red.error("These files do not exist: ");
+        dope.error(stats.notExisting.join("\n").trim());
     }
 
 } else {
