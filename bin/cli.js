@@ -39,12 +39,18 @@ if (argv.valid){
         : y2md.getMarkdown(stats.files, argv.template);
     process.stdout.write(result);
     
+    if (stats.files.length){
+        dope.green.underline.error("Processed:");
+        dope.error(stats.files.join("\n").trim());
+    } else {
+        
+    }
     if (stats.dirs.length){
-        dope.red.error("Input must be files only, these directories were ignored: ");
+        dope.magenta.underline.error("Not files, ignored:");
         dope.error(stats.dirs.join("\n").trim());
     }
     if (stats.notExisting.length){
-        dope.red.error("These files do not exist: ");
+        dope.magenta.underline.error("Do not exist:");
         dope.error(stats.notExisting.join("\n").trim());
     }
 
