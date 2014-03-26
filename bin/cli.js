@@ -46,11 +46,11 @@ if (argv.valid){
         
     }
     if (stats.dirs.length){
-        dope.magenta.underline.error("Not files, ignored:");
+        dope.cyan.underline.error("Not files, ignored:");
         dope.error(stats.dirs.join("\n").trim());
     }
     if (stats.notExisting.length){
-        dope.magenta.underline.error("Do not exist:");
+        dope.cyan.underline.error("Do not exist:");
         dope.error(stats.notExisting.join("\n").trim());
     }
 
