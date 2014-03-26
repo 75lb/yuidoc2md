@@ -4,7 +4,7 @@
   "description": "A yuidoc-to-markdown generator.",
   "repository": "https://github.com/75lb/yuidoc2md",
   "main": "lib/yuidoc2md",
-  "bin": "cli.js",
+  "bin": "bin/cli.js",
   "author": "Lloyd Brookes",
   "license": "MIT",
   "scripts": {
@@ -14,8 +14,9 @@
     "yuidocjs": "~0.3.44",
     "nature": "~0.4",
     "handlebars": "~2.0",
-    "console-dope": "^0.3.2",
-    "more-fs": "^0.1.0"
+    "console-dope": "~0.3.2",
+    "more-fs": "~0.2.0",
+    "wodge": "~0.4.1"
   },
   "devDependencies": {
     "mocha": "~1.18.0"
