@@ -2,9 +2,7 @@
 "use strict";
 
 var y2md = require("../lib/yuidoc2md"),
-    fs = require("fs"),
     mfs = require("more-fs"),
-    path = require("path"),
     Model = require("nature").Model,
     dope = require("console-dope");
 
@@ -42,8 +40,6 @@ if (argv.valid){
     if (stats.files.length){
         dope.green.underline.error("Processed:");
         dope.error(stats.files.join("\n").trim());
-    } else {
-        
     }
     if (stats.dirs.length){
         dope.cyan.underline.error("Not files, ignored:");

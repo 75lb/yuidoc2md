@@ -33,7 +33,7 @@ $ yuidoc2md src/*
 
 Globstar matching is supported, enabling recursive expressions like: (processes all .js files from the current directory down)
 ```sh
-$ yuidoc2md **/*.js
+$ yuidoc2md "**/*.js"
 ```
 
 Output markdown doc for all source under `src/` to a file:
