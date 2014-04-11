@@ -16,7 +16,7 @@
     "handlebars": "~2.0",
     "console-dope": "~0.3.2",
     "more-fs": "~0.2.0",
-    "wodge": "~0.4.1"
+    "wodge": "~0.5.0"
   },
   "devDependencies": {
     "mocha": "~1.18.0"
