@@ -1,8 +1,12 @@
 {
   "name": "yuidoc2md",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "A yuidoc-to-markdown generator.",
-  "keywords": [ "generator", "yuidoc", "markdown" ],
+  "keywords": [
+    "generator",
+    "yuidoc",
+    "markdown"
+  ],
   "repository": "https://github.com/75lb/yuidoc2md",
   "main": "lib/yuidoc2md",
   "bin": "bin/cli.js",
