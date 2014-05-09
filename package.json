@@ -2,6 +2,7 @@
   "name": "yuidoc2md",
   "version": "0.4.4",
   "description": "A yuidoc-to-markdown generator.",
+  "keywords": [ "generator", "yuidoc", "markdown" ],
   "repository": "https://github.com/75lb/yuidoc2md",
   "main": "lib/yuidoc2md",
   "bin": "bin/cli.js",
@@ -15,8 +16,8 @@
     "nature": "~0.4",
     "handlebars": "~2.0",
     "console-dope": "~0.3.2",
-    "more-fs": "~0.2.0",
-    "wodge": "~0.5.0"
+    "more-fs": "~0.3.0",
+    "wodge": "~0.6.0"
   },
   "devDependencies": {
     "mocha": "~1.18.0"

@@ -1,5 +1,6 @@
-[![NPM version](https://badge.fury.io/js/yuidoc2md.png)](http://badge.fury.io/js/yuidoc2md)
-[![Dependency Status](https://david-dm.org/75lb/yuidoc2md.png)](https://david-dm.org/75lb/yuidoc2md)
+[![view on npm](http://img.shields.io/npm/v/yuidoc2md.svg)](https://www.npmjs.org/package/yuidoc2md)
+![npm module downloads per month](http://img.shields.io/npm/dm/yuidoc2md.svg)
+[![Dependency Status](https://david-dm.org/75lb/yuidoc2md.svg)](https://david-dm.org/75lb/yuidoc2md)
 ![Analytics](https://ga-beacon.appspot.com/UA-27725889-14/yuidoc2md/README.md?pixel)
 
 yuidoc2md
@@ -251,6 +252,3 @@ and this json:
    ]
 }
 ```
-
-
-[![NPM](https://nodei.co/npm-dl/yuidoc2md.png?months=3)](https://nodei.co/npm/yuidoc2md/)
