@@ -31,7 +31,7 @@ if (argv.help || (!argv.input)){
 }
 
 if (argv.valid){
-    var stats = new mfs.FileStats(argv.input);
+    var stats = new mfs.FileSet(argv.input);
     var result = argv.json
         ? JSON.stringify(y2md.getJson(stats.files), null, "   ")
         : y2md.getMarkdown(stats.files, argv.template);

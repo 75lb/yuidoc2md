@@ -9,7 +9,8 @@
   "author": "Lloyd Brookes",
   "license": "MIT",
   "scripts": {
-    "test": "mocha --reporter spec test/*.js"
+    "test": "mocha --reporter spec test/*.js",
+    "lint": "jshint bin/cli.js lib/yuidoc2md.js; echo"
   },
   "dependencies": {
     "yuidocjs": "~0.3.44",
