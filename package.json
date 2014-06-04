@@ -17,12 +17,12 @@
     "lint": "jshint bin/cli.js lib/yuidoc2md.js; echo"
   },
   "dependencies": {
-    "yuidocjs": "~0.3.44",
-    "nature": "~0.4",
-    "handlebars": "~2.0",
+    "command-line-args": "^0.2.0",
     "console-dope": "~0.3.2",
+    "handlebars": "~2.0",
     "more-fs": "~0.3.0",
-    "wodge": "~0.6.0"
+    "wodge": "~0.6.0",
+    "yuidocjs": "~0.3.44"
   },
   "devDependencies": {
     "mocha": "~1.18.0"
