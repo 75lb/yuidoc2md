@@ -3,6 +3,7 @@
 
 var y2md = require("../lib/yuidoc2md"),
     mfs = require("more-fs"),
+    fileSet = require("file-set"),
     cliArgs = require("command-line-args"),
     dope = require("console-dope");
 
@@ -31,7 +32,7 @@ if (argv.help || (!argv.input)){
     process.exit(0);
 }
 
-var stats = new mfs.FileSet(argv.input);
+var stats = fileSet(argv.input);
 var result = argv.json
     ? JSON.stringify(y2md.getJson(stats.files), null, "   ")
     : y2md.getMarkdown(stats.files, argv.template);
