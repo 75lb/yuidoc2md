@@ -20,7 +20,7 @@
     "array-ting": "^1.0.4",
     "command-line-args": "^0.2.0",
     "console-dope": "~0.3.2",
-    "file-set": "0.0.1",
+    "file-set": "~0.1",
     "handlebars": "~2.0",
     "more-fs": "~0.4.0",
     "yuidocjs": "~0.3.44"
