@@ -1,7 +1,11 @@
 [![view on npm](http://img.shields.io/npm/v/yuidoc2md.svg)](https://www.npmjs.org/package/yuidoc2md)
-![npm module downloads per month](http://img.shields.io/npm/dm/yuidoc2md.svg)
+[![npm module downloads per month](http://img.shields.io/npm/dm/yuidoc2md.svg)](https://www.npmjs.org/package/yuidoc2md)
 [![Dependency Status](https://david-dm.org/75lb/yuidoc2md.svg)](https://david-dm.org/75lb/yuidoc2md)
 ![Analytics](https://ga-beacon.appspot.com/UA-27725889-14/yuidoc2md/README.md?pixel)
+
+NOTICE
+======
+Project maintenance is currently on ice while i develop the vastly superior [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown), please consider using that instead. 
 
 yuidoc2md
 =========
